@@ -38,9 +38,16 @@ app.get('/about', (req,res) => {
     //year: new Date().getFullYear()
   });
 });
+
+app.get('/project',(req,res) => {
+  res.render('project.hbs',{
+    pagetitle: 'project page'
+  });
+});
 app.get('/bad', (req,res) => {
   res.send({
     error: 'unable to send'
   });
 });
+
 app.listen(port);
